@@ -108,12 +108,17 @@
 <meta property="og:url" content="http://yoursite.com/2016/11/21/如何最正确的安装和使用hexo-github/index.html">
 <meta property="og:site_name" content="请叫我峰仔仔">
 <meta property="og:description" content="前言 网上关于hexo+github的教程太多了，多的让人可怕，但是已经那么多了为什么我还要写这篇hexo+github教程呢？1.网上的教程有的太老，已经不适应了。2.网上的教程好多都是一个人写（可能有错误）然后就被许多人复制，有的简直是原文复制就是没有复制作者，然后广告多的可怕，风气真差，关于这个blog互相抄的事我在Cnode社区发过一个讨论贴——-附上链接——-关于blog文章抄袭现象3">
-<meta property="og:image" content="http://yoursite.com/../../images/ic_github_project.png">
-<meta property="og:updated_time" content="2016-11-22T01:33:20.724Z">
+<meta property="og:image" content="http://yoursite.com/images/ic_github_project.png">
+<meta property="og:image" content="http://yoursite.com/images/ic_github_name.png">
+<meta property="og:image" content="http://yoursite.com/images/ic_github_setting.png">
+<meta property="og:image" content="http://yoursite.com/images/ic_github_ssh.png">
+<meta property="og:image" content="http://yoursite.com/images/ic_github_page.png">
+<meta property="og:image" content="http://yoursite.com/images/ic_github_githubpage.png">
+<meta property="og:updated_time" content="2016-11-22T02:34:54.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何最正确的安装和使用hexo+github">
 <meta name="twitter:description" content="前言 网上关于hexo+github的教程太多了，多的让人可怕，但是已经那么多了为什么我还要写这篇hexo+github教程呢？1.网上的教程有的太老，已经不适应了。2.网上的教程好多都是一个人写（可能有错误）然后就被许多人复制，有的简直是原文复制就是没有复制作者，然后广告多的可怕，风气真差，关于这个blog互相抄的事我在Cnode社区发过一个讨论贴——-附上链接——-关于blog文章抄袭现象3">
-<meta name="twitter:image" content="http://yoursite.com/../../images/ic_github_project.png">
+<meta name="twitter:image" content="http://yoursite.com/images/ic_github_project.png">
 
 
 
@@ -389,10 +394,11 @@
         <hr>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p> 网上关于hexo+github的教程太多了，多的让人可怕，但是已经那么多了为什么我还要写这篇hexo+github教程呢？<br>1.网上的教程有的太老，已经不适应了。<br>2.网上的教程好多都是一个人写（可能有错误）然后就被许多人复制，有的简直是原文复制就是没有复制作者，然后广告多的可怕，风气真差，关于这个<strong>blog互相抄的事我在Cnode社区发过一个讨论贴</strong>——-附上链接——-<strong><a href="https://cnodejs.org/topic/582e87500249714d79d41a66" target="_blank" rel="external">关于blog文章抄袭现象</a></strong><br>3.我会把最正确的方法写下了，给需要的人最高的效率。<br><a id="more"></a></p>
 <h3 id="为什么要用hexo-github"><a href="#为什么要用hexo-github" class="headerlink" title="为什么要用hexo+github"></a>为什么要用hexo+github</h3><h4 id="1-我为什么要用hexo-github搭建blog"><a href="#1-我为什么要用hexo-github搭建blog" class="headerlink" title="1.我为什么要用hexo+github搭建blog"></a>1.我为什么要用hexo+github搭建blog</h4><p>因为我本身就在学习使用nodejs，hexo是基于nodejs的静态页面，github又是代码管理仓库的好工具</p>
-<h4 id="2-搭建hexo-github要了解一下下面4个知识点"><a href="#2-搭建hexo-github要了解一下下面4个知识点" class="headerlink" title="2.搭建hexo+github要了解一下下面4个知识点"></a>2.搭建hexo+github要了解一下下面4个知识点</h4><p>1.hexo<br>2.github<br>3.git<br>4.nodejs<br>关于这4个知识点可以自行去查资料了解一下（不需要很深），不过相信既然选择去搞这个hexo博客，对于应该node是有了解的</p>
+<h4 id="2-搭建hexo-github要了解一下下面4个知识点"><a href="#2-搭建hexo-github要了解一下下面4个知识点" class="headerlink" title="2.搭建hexo+github要了解一下下面4个知识点"></a>2.搭建hexo+github要了解一下下面4个知识点</h4><p>1.hexo<br>2.github<br>3.git<br>4.nodejs<br>关于这4个知识点可以自行去查资料了解一下（不需要很深），不过相信既然选择去搞这个hexo博客，应该对于node是有了解的</p>
 <h3 id="开始搭建hexo博客"><a href="#开始搭建hexo博客" class="headerlink" title="开始搭建hexo博客"></a>开始搭建hexo博客</h3><h4 id="1-搭建所需要的环境"><a href="#1-搭建所需要的环境" class="headerlink" title="1.搭建所需要的环境"></a>1.搭建所需要的环境</h4><p>1.首先要有node环境（安装了node）可以node -v看一下node的版本号<br>2.安装git，可以git –version看版本号<br>3.注册github账号</p>
-<h4 id="2-利用命令生成hexo"><a href="#2-利用命令生成hexo" class="headerlink" title="2.利用命令生成hexo"></a>2.利用命令生成hexo</h4><p>1.在node中执行，npm install -g hexo<br>2.查看hexo版本号，确认是否安装成功，hexo –version<br>3.执行hexo init<br>4.进入生成文件的根目录执行hexo server就可以看到一个blog最原始的页面（blog第一步完成了）</p>
-<h3 id="打开注册好的github"><a href="#打开注册好的github" class="headerlink" title="打开注册好的github"></a>打开注册好的github</h3><p>1.新建一个项目<br><img src="../../images/ic_github_project.png" alt="Alt text"></p>
+<h4 id="2-利用命令生成hexo"><a href="#2-利用命令生成hexo" class="headerlink" title="2.利用命令生成hexo"></a>2.利用命令生成hexo</h4><p>1.在node中执行，npm install -g hexo<br>2.查看hexo版本号，确认是否安装成功，hexo –version<br>3.执行hexo init<br>4.进入生成文件的根目录执行hexo server就可以看到一个blog最原始的页面（blog第一步完成了）<br>这里只是一个本地的hexo，只能本地访问，下面来设置可以外网访问</p>
+<h3 id="打开注册好的github"><a href="#打开注册好的github" class="headerlink" title="打开注册好的github"></a>打开注册好的github</h3><p>1.选择New repository，新建一个项目。<br><img src="/images/ic_github_project.png" alt="新建项目图片"><br>2.填写Repository name<strong>（注意只能填写标准格式，也就是你的(注册名.github.io)就拿我的来说，就是旁边的Owner.github.io（wang-weifeng.github.io））</strong>填写完成点击Create repository<br><img src="/images/ic_github_name.png" alt="项目名称图片"><br>3.点击setting设置按钮添加ssh（这一步在你安装github时应该也会设置的不详细介绍）<br><img src="/images/ic_github_setting.png" alt="进入设置界面"><br>4.点击具有ssh这一项的设置按钮，打开会看到添加ssh选项(自行查找如何设置)<br><img src="/images/ic_github_ssh.png" alt="进入设置界面"><br><strong>5.我觉得最后一个关于github的设置很关键，也是在许多教程中没有说的，也是导致我为什么hexo无法上传到github的原因</strong><br>5.1打开刚开始创建的项目，在这个项目中找到settings选项，如图<br><img src="/images/ic_github_page.png" alt="进入设置界面"><br>5.2往下翻找到github pages，然后会看到这一栏最下面有个选择是打开github pages，因为我打开过了显示的是Launch automatic page generator,根据步骤一步一步，直到你在浏览器中打开你的域名（之前设置的项目名称）比如我的就是wang-weifeng.github.io有成功内容<br><img src="/images/ic_github_githubpage.png" alt="进入设置界面"><br>直到这里github已设置完毕</p>
+<h3 id="将hexo生成的文件生成静态文件"><a href="#将hexo生成的文件生成静态文件" class="headerlink" title="将hexo生成的文件生成静态文件"></a>将hexo生成的文件生成静态文件</h3><p>1.因为有的会出现问题所以每次可以执行<br>hexo clean<br>2.hexo g<br>3.hexo d<br>然后你在浏览器中打开你的域名（之前设置的项目名称）比如我的就是wang-weifeng.github.io</p>
 
       
     </div>
@@ -620,7 +626,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要用hexo-github"><span class="nav-number">2.</span> <span class="nav-text">为什么要用hexo+github</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-我为什么要用hexo-github搭建blog"><span class="nav-number">2.1.</span> <span class="nav-text">1.我为什么要用hexo+github搭建blog</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-搭建hexo-github要了解一下下面4个知识点"><span class="nav-number">2.2.</span> <span class="nav-text">2.搭建hexo+github要了解一下下面4个知识点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始搭建hexo博客"><span class="nav-number">3.</span> <span class="nav-text">开始搭建hexo博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-搭建所需要的环境"><span class="nav-number">3.1.</span> <span class="nav-text">1.搭建所需要的环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-利用命令生成hexo"><span class="nav-number">3.2.</span> <span class="nav-text">2.利用命令生成hexo</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开注册好的github"><span class="nav-number">4.</span> <span class="nav-text">打开注册好的github</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要用hexo-github"><span class="nav-number">2.</span> <span class="nav-text">为什么要用hexo+github</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-我为什么要用hexo-github搭建blog"><span class="nav-number">2.1.</span> <span class="nav-text">1.我为什么要用hexo+github搭建blog</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-搭建hexo-github要了解一下下面4个知识点"><span class="nav-number">2.2.</span> <span class="nav-text">2.搭建hexo+github要了解一下下面4个知识点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始搭建hexo博客"><span class="nav-number">3.</span> <span class="nav-text">开始搭建hexo博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-搭建所需要的环境"><span class="nav-number">3.1.</span> <span class="nav-text">1.搭建所需要的环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-利用命令生成hexo"><span class="nav-number">3.2.</span> <span class="nav-text">2.利用命令生成hexo</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开注册好的github"><span class="nav-number">4.</span> <span class="nav-text">打开注册好的github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将hexo生成的文件生成静态文件"><span class="nav-number">5.</span> <span class="nav-text">将hexo生成的文件生成静态文件</span></a></li></ol></div>
             
 
           </div>
