@@ -108,10 +108,12 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/23/node.js前后端的调试--nodemon--node-inspector/index.html">
 <meta property="og:site_name" content="请叫我峰仔仔">
 <meta property="og:description" content="前言 It is better to give a person a fish than a fish ^^^^多图^^^^^^^^^^^^多图^^^^^^^^^^^^多图^^^^1.话说遇到难题并不可怕，可怕的是没有解决的方法。我觉得作为程序猿来说遇到难题或者出现Bug是在正常不过的事了，然后我们的目的是要解决这些问题可能当你解决不了没有头绪去求救同事或者大神，同事或者大神给你解决了，你很高兴，">
-<meta property="og:updated_time" content="2017-01-24T03:07:58.162Z">
+<meta property="og:image" content="http://yoursite.com/images/ic_inspector_view.png">
+<meta property="og:updated_time" content="2017-01-24T05:24:47.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node.js前后端的调试--nodemon--node-inspector">
 <meta name="twitter:description" content="前言 It is better to give a person a fish than a fish ^^^^多图^^^^^^^^^^^^多图^^^^^^^^^^^^多图^^^^1.话说遇到难题并不可怕，可怕的是没有解决的方法。我觉得作为程序猿来说遇到难题或者出现Bug是在正常不过的事了，然后我们的目的是要解决这些问题可能当你解决不了没有头绪去求救同事或者大神，同事或者大神给你解决了，你很高兴，">
+<meta name="twitter:image" content="http://yoursite.com/images/ic_inspector_view.png">
 
 
 
@@ -384,9 +386,11 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p> It is better to give a person a fish than a fish<br> <strong>^^^^多图^^^^^^^^^^^^多图^^^^^^^^^^^^多图^^^^</strong><br>1.话说遇到难题并不可怕，可怕的是没有解决的方法。我觉得作为程序猿来说遇到难题或者出现Bug是在正常不过的事了，然后我们的目的是要解决这些问题可能当你解决不了没有头绪去求救同事或者大神，同事或者大神给你解决了，你很高兴，很开心，重要解决了，完事了-^-,然后你下次遇到相同的问题你很快解决了，但是如果遇到不同的问题似不似还会没有思路呢？<br>2.其实当你学会一种解决问题的方法可能你遇到问题就会很容易的解决，既速度，又方便实用。<br>3.那就来学一学node的调试方法之一：–nodmeon—-node-inspector<br><a id="more"></a></p>
-<h3 id="为什么要用node的调试方法"><a href="#为什么要用node的调试方法" class="headerlink" title="为什么要用node的调试方法"></a>为什么要用node的调试方法</h3><h4 id="1-前言中也提到"><a href="#1-前言中也提到" class="headerlink" title="1.前言中也提到"></a>1.前言中也提到</h4><p>也可以说是一种学习的方法，解决bug难题的方法（-^-当然大牛一般不用-^-脚趾头想想也知道了）</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p> It is better to give a person a fish than a fish<br> <strong>^^^^多图^^^^^^^^^^^^多图^^^^^^^^^^^^多图^^^^</strong><br>1.话说遇到难题并不可怕，可怕的是没有解决的方法。我觉得作为程序猿来说遇到难题或者出现Bug是在正常不过的事了，然后我们的目的是要解决这些问题可能当你解决不了没有头绪去求救同事或者大神，同事或者大神给你解决了，你很高兴，很开心，重要解决了，完事了-^-,然后你下次遇到相同的问题你很快解决了，但是如果遇到不同的问题似不似还会没有思路呢？<br>2.其实当你学会一种解决问题的方法可能你遇到问题就会很容易的解决，既速度，又方便实用。<br>3.<strong>其实还有最重要的一点是可以更好的跟踪代码知道代码的执行顺序过程对于快速看懂别人代码很是重要</strong><br>4.那就来学一学node的调试方法之一：–nodmeon—-node-inspector<br><a id="more"></a></p>
+<h3 id="为什么要用node的调试方法"><a href="#为什么要用node的调试方法" class="headerlink" title="为什么要用node的调试方法"></a>为什么要用node的调试方法</h3><h4 id="1-前言中也提到"><a href="#1-前言中也提到" class="headerlink" title="1.前言中也提到"></a>1.前言中也提到</h4><p>1.也可以说是一种学习的方法，解决bug难题的方法（-^-当然大牛一般不用-^-脚趾头想想也知道了）<br>2.更好的清楚地知道代码的执行流程</p>
 <h4 id="2-使用node-inspector要以下几个工具"><a href="#2-使用node-inspector要以下几个工具" class="headerlink" title="2.使用node-inspector要以下几个工具"></a>2.使用node-inspector要以下几个工具</h4><p>1.浏览器^^^^^^^<br>2.node环境^^^^^</p>
+<h3 id="开始调试"><a href="#开始调试" class="headerlink" title="开始调试"></a>开始调试</h3><h4 id="1-首先安装nodemon和node-inspector"><a href="#1-首先安装nodemon和node-inspector" class="headerlink" title="1.首先安装nodemon和node-inspector"></a>1.首先安装nodemon和node-inspector</h4><p>1.npm install -g nodemon<br>2.npm install -g node-inspector</p>
+<h4 id="2-调试开启"><a href="#2-调试开启" class="headerlink" title="2.调试开启"></a>2.调试开启</h4><p>1.nodemon –debug bin/www<br>根据自己项目情况（我的是bin/www）<br><strong>注意是–debug</strong><br>2.在开启一个终端输入(因为是全局安装所以直接输入)<br>node-inspector<br><img src="/images/ic_inspector_view.png" alt="node-inspector终端后图片"><br>将图中地址复制到浏览器</p>
 
       
     </div>
@@ -616,7 +620,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要用node的调试方法"><span class="nav-number">2.</span> <span class="nav-text">为什么要用node的调试方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-前言中也提到"><span class="nav-number">2.1.</span> <span class="nav-text">1.前言中也提到</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-使用node-inspector要以下几个工具"><span class="nav-number">2.2.</span> <span class="nav-text">2.使用node-inspector要以下几个工具</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要用node的调试方法"><span class="nav-number">2.</span> <span class="nav-text">为什么要用node的调试方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-前言中也提到"><span class="nav-number">2.1.</span> <span class="nav-text">1.前言中也提到</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-使用node-inspector要以下几个工具"><span class="nav-number">2.2.</span> <span class="nav-text">2.使用node-inspector要以下几个工具</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始调试"><span class="nav-number">3.</span> <span class="nav-text">开始调试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-首先安装nodemon和node-inspector"><span class="nav-number">3.1.</span> <span class="nav-text">1.首先安装nodemon和node-inspector</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-调试开启"><span class="nav-number">3.2.</span> <span class="nav-text">2.调试开启</span></a></li></ol></li></ol></div>
             
 
           </div>
